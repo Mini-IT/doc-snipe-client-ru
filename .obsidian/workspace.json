@@ -1,0 +1,156 @@
+{
+  "main": {
+    "id": "e74dbf5ed75c3979",
+    "type": "split",
+    "children": [
+      {
+        "id": "571c4abc7a038026",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9eb935b9822b692d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Snipe/Documentation/SnipeClient v 6/Update v.5 → v.6.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "fc739f2d7afff4bb",
+    "type": "split",
+    "children": [
+      {
+        "id": "bfde9b9db5fe8a25",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b6a13920e2474f25",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "fe366b0537dcf74c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "7ac48f7f150cb2e4",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "499e79d943c4135d",
+    "type": "split",
+    "children": [
+      {
+        "id": "2172b7ef072477b9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "75d5b88ec81faef9",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Snipe/Documentation/SnipeClient v 6/Update v.5 → v.6.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "54304a15511808c8",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Snipe/Documentation/SnipeClient v 6/Update v.5 → v.6.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "85fdf55dcb6e3109",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "c26dd1306dc960be",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Snipe/Documentation/SnipeClient v 6/Update v.5 → v.6.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "9eb935b9822b692d",
+  "lastOpenFiles": [
+    "Snipe/Documentation/SnipeClient v 6/SnipeClient v.6 - Что нового.md",
+    "Home.md",
+    "Snipe/Documentation/SnipeClient v 6/Update v.5 → v.6.md",
+    "Snipe/Documentation/Как принудительно включить DEV.md"
+  ]
+}
