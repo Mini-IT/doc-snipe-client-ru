@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Snipe/Documentation/SnipeClient v 6/Update v.5 → v.6.md",
+                "file": "Snipe/Documentation/SnipeClient v 6/SnipeClient 6.0 → 6.1/SnipeClient 6 0 → 6 1.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Snipe/Documentation/SnipeClient v 6/Update v.5 → v.6.md",
+                "file": "Snipe/Documentation/SnipeClient v 6/SnipeClient 6.0 → 6.1/SnipeClient 6 0 → 6 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Snipe/Documentation/SnipeClient v 6/Update v.5 → v.6.md",
+                "file": "Snipe/Documentation/SnipeClient v 6/SnipeClient 6.0 → 6.1/SnipeClient 6 0 → 6 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Snipe/Documentation/SnipeClient v 6/Update v.5 → v.6.md"
+                "file": "Snipe/Documentation/SnipeClient v 6/SnipeClient 6.0 → 6.1/SnipeClient 6 0 → 6 1.md"
               }
             }
           }
@@ -149,8 +149,11 @@
   "active": "9eb935b9822b692d",
   "lastOpenFiles": [
     "Snipe/Documentation/SnipeClient v 6/SnipeClient v.6 - Что нового.md",
-    "Home.md",
+    "Snipe/Documentation/Snipe для клиентского разработчика Unity/chapters/Advanced topics/HTTP REST API.md",
+    "Snipe/Documentation/Snipe для клиентского разработчика Unity/Содержание.md",
+    "Snipe/Documentation/Snipe для клиентского разработчика Unity/chapters/Общие сведения/Что такое Snipe.md",
     "Snipe/Documentation/SnipeClient v 6/Update v.5 → v.6.md",
+    "Home.md",
     "Snipe/Documentation/Как принудительно включить DEV.md"
   ]
 }
