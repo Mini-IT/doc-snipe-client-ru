@@ -20,7 +20,7 @@
 
 Если нужно, то логи можно выгружать в CSV. Эта функция спрятана так хитро, что мне даже не удается сделать скриншот. Нужно нажать на маленький треугольник у заголовка Logs, потом выбрать Inspect и далее Data.
 
-[https://lh7-us.googleusercontent.com/WxBM9IBr14qFeWmumJjg8jhpyqYSgD2Un67WFkF-TZfH30SVwKDMdpMtKcpML2pDOkw3u6JAgGf63L9H-MAYz6p5H5bLhDEgsFhHu5S7OwPLfKzKwB8ehktED66IyaZzvRIvs4MMQ5h013oHMHiso2s](https://lh7-us.googleusercontent.com/WxBM9IBr14qFeWmumJjg8jhpyqYSgD2Un67WFkF-TZfH30SVwKDMdpMtKcpML2pDOkw3u6JAgGf63L9H-MAYz6p5H5bLhDEgsFhHu5S7OwPLfKzKwB8ehktED66IyaZzvRIvs4MMQ5h013oHMHiso2s)
+![](https://lh7-us.googleusercontent.com/WxBM9IBr14qFeWmumJjg8jhpyqYSgD2Un67WFkF-TZfH30SVwKDMdpMtKcpML2pDOkw3u6JAgGf63L9H-MAYz6p5H5bLhDEgsFhHu5S7OwPLfKzKwB8ehktED66IyaZzvRIvs4MMQ5h013oHMHiso2s)
 
 Где в свою очередь будет кнопка Download CSV. Большие логи скорее всего взорвут вам браузер, поэтому сперва придется сократить их через время или по каким-то критериям запроса.
 
