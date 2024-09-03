@@ -5,7 +5,7 @@
 
 Каждое сообщение, которое клиент присылает на сервер, его ответ и много другой информации идет в серверные логи. Самое главное, что в случае серверных действий и операций над логикой в серверные логи идет дифф изменений профиля игрока, чтобы не оставалось сомнений о том, что произошло. Их можно посмотреть через Графану, используя логин и пароль для серверного редактора. Для каждого проекта дашборды одинаковы, но находятся в разных организациях (у DEV и LIVE версий проекта свои организации). Поэтому если вы работаете над несколькими проектами одновременно или только что перешли на другой проект, понадобится выбрать корректную организацию в Графане. Сменить организацию можно, наведя на свою иконку в нижнем левом углу и выбрав в выпадающем списке Switch organization:
 
-[https://lh7-us.googleusercontent.com/ZKMeqPRnzK8lEk-MDwvCqG9yr-pNFMl9Z5tEaTCEkGMsCvcsnnxFkkUXaAR-8yZELmo4MnYhx7hkHMIhpHRAHauEJNygmAQpsm2AmZTQe0mGX6Cb22iGYfy4rvfn4nLegm_0jv6x7oA7MZ-wYJkh2ok](https://lh7-us.googleusercontent.com/ZKMeqPRnzK8lEk-MDwvCqG9yr-pNFMl9Z5tEaTCEkGMsCvcsnnxFkkUXaAR-8yZELmo4MnYhx7hkHMIhpHRAHauEJNygmAQpsm2AmZTQe0mGX6Cb22iGYfy4rvfn4nLegm_0jv6x7oA7MZ-wYJkh2ok)
+![](https://lh7-us.googleusercontent.com/ZKMeqPRnzK8lEk-MDwvCqG9yr-pNFMl9Z5tEaTCEkGMsCvcsnnxFkkUXaAR-8yZELmo4MnYhx7hkHMIhpHRAHauEJNygmAQpsm2AmZTQe0mGX6Cb22iGYfy4rvfn4nLegm_0jv6x7oA7MZ-wYJkh2ok)
 
 Внутри проекта есть несколько дашбордов с логами. Полный список можно получить, нажав сверху на слова "General / Home". Далее надо выбирать один из следующих пунктов (имя проекта для примера):
 
