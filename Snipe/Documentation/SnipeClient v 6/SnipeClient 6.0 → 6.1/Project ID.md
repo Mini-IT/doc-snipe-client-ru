@@ -6,8 +6,8 @@
 Можно спросить у PM
 
 на примере Piece It Up
-![[Untitled.png]]
 
+![Untitled](assets/Untitled.png)
 
 Project ID нужно указывать **без суффикса,** т.е. будет:
 
