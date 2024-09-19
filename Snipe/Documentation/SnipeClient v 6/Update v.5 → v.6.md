@@ -26,7 +26,7 @@ Api compatibility level` = `.NET Standard 2.1`
 6. Обновить пакет `SnipeClient`
 7. в Unity 2020 добавить `System.Buffers` (см. п. 5b)
 8. Установить пакет `Social`
-[`https://ghp_v72...@github.com/Mini-IT/unity-framework-social-core.git`](https://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@github.com/Mini-IT/unity-framework-social-core.git)
+`https://ghp_v72...@github.com/Mini-IT/unity-framework-social-core.git`
 9. обновить пакет `Analytics - Core` до 2.3.0
 10. обновить пакет `Analytics - Basic Tracker` до 2.3.0
 
