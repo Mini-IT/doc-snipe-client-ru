@@ -19,6 +19,7 @@
 - `com.miniit.framework.config` - требуется ветка `feature/snipe-context-factories`
 - `Unity-Log-Viewer` - см. ниже
 - `UWPNotificationsService` (CYSI) - нужно переделать обращения к `SnipeContext.Default`
+- `SnipeTools` 1.6.0
 
 ## SnipeApi generator changes (server side)
 1. заменить
