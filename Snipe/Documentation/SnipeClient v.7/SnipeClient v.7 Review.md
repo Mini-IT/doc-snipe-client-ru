@@ -71,6 +71,7 @@ _snipeContext = new SnipeApiContextFactory().CreateContext(0) as SnipeApiContext
 
 и обращаемся везде уже к нашему инстансу
 
+#### Старые проекты без DI
 Пример из CYSI
 ```csharp
 public class Server : MonoSingleton<Server>
@@ -90,6 +91,29 @@ class AnyOtherClass
 	}
 }
 ```
+
+#### DI + ISnipeContextMaster, ISnipeContextHolder
+Меняем всего одну строчку - создание инстанса SnipeContext:
+```csharp
+public class ServerContext : ISnipeContextMaster
+{
+	public SnipeApiContext Context
+	{
+		get
+		{
+			if (_snipeContext == null || _snipeContext.IsDisposed)
+			{
+				_initialized = false;
+				_snipeContext = new SnipeApiContextFactory().CreateContext(0) as SnipeApiContext;
+			}
+			return _snipeContext;
+		}
+	}
+```
+
+#### DI без ISnipeContextHolder
+
+
 ## Unity Log Viewer / Reporter
 В LogViewer-е был добавлен костыль, который отправляет лог на сервер в графану. Этот костыль использовал обращение к синглтону `SnipeContext.Default`, которого больше не существует.
 ```csharp
