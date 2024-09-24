@@ -16,7 +16,7 @@
 
 ## Повлияло на следующие пакеты
 - `com.miniit.altertask` - новый пакет
-- `com.miniit.framework.config` - требуется ветка `feature/snipe-context-factories`
+- `com.miniit.framework.config` - требуется версия 3.4.0
 - `Unity-Log-Viewer` - см. ниже
 - `UWPNotificationsService` (CYSI) - нужно переделать обращения к `SnipeContext.Default`
 - `SnipeTools` 1.6.0
