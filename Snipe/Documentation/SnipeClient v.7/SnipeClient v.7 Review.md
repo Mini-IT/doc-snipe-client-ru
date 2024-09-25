@@ -17,6 +17,7 @@
 ## Повлияло на следующие пакеты
 - `com.miniit.altertask` - новый пакет
 - `com.miniit.framework.config` - требуется версия 3.4.0
+- `com.miniit.framework.iap-serververification` - требуется версия 3.0.0
 - `Unity-Log-Viewer` - см. ниже
 - `UWPNotificationsService` (CYSI) - нужно переделать обращения к `SnipeContext.Default`
 - `SnipeTools` 1.6.0
@@ -147,8 +148,8 @@ public class ServerService
 		var reporter = UnityEngine.Object.FindObjectOfType<Reporter>();
 		if (reporter != null)
 		{
-			reporter.LogSaved -= OnReporterLogSaved();
-			reporter.LogSaved += OnReporterLogSaved();
+			reporter.LogSaved -= OnReporterLogSaved;
+			reporter.LogSaved += OnReporterLogSaved;
 		}
 	}
 	
