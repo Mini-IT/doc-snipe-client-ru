@@ -17,6 +17,7 @@
 ## Повлияло на следующие пакеты
 - `com.miniit.altertask` - новый пакет
 - `com.miniit.framework.config` - требуется версия 3.4.0
+- `com.miniit.framework.iap` - требуется версия 2.0.0
 - `com.miniit.framework.iap-serververification` - требуется версия 3.0.0
 - `Unity-Log-Viewer` - см. ниже
 - `UWPNotificationsService` (CYSI) - нужно переделать обращения к `SnipeContext.Default`
@@ -72,14 +73,24 @@ _snipeContext = new SnipeApiContextFactory().CreateContext(0) as SnipeApiContext
 ```
 
 и обращаемся везде уже к нашему инстансу
+### interface ISnipeContextReference
+В пэкэдже объявлен интерфейс `MiniIT.Snipe.ISnipeContextReference`, который используется вместо старых
+`SnipeContext.Default` и `SnipeContext.GetInstance`.
+Его нужно реализовать для того, чтобы код в пэкэджах мог достучаться до снайпа. Требуется не во всех проектах.
 
 #### Старые проекты без DI
 Пример из CYSI
 ```csharp
-public class Server : MonoSingleton<Server>
+public class Server : MonoSingleton<Server>, ISnipeContextReference
 {
 	public SnipeApiContext Snipe => _snipeContext ??= new SnipeApiContextFactory().CreateContext(0) as SnipeApiContext;
 	private SnipeApiContext _snipeContext;
+
+	public bool TryGetSnipeContext(out SnipeContext context)
+	{
+	    context = _snipeContext;
+	    return context != null;
+	}
 	
 	//...
 }
@@ -94,9 +105,14 @@ class AnyOtherClass
 }
 ```
 
-#### DI + ISnipeContextMaster, ISnipeContextHolder
-Меняем всего одну строчку - создание инстанса SnipeContext:
+#### Проекты с DI + ISnipeContextMaster, ISnipeContextHolder
+Наследуем и реализуем `ISnipeContextReference` и меняем строчку создания инстанса SnipeContext:
 ```csharp
+public interface ISnipeContextHolder : ISnipeContextReference
+{
+//...
+}
+
 public class ServerContext : ISnipeContextMaster
 {
 	public SnipeApiContext Context
@@ -111,10 +127,23 @@ public class ServerContext : ISnipeContextMaster
 			return _snipeContext;
 		}
 	}
+	
+	public bool TryGetSnipeContext(out SnipeContext context)
+	{
+		if (TryGetContext(out var apicontext))
+		{
+			context = apicontext;
+			return true;
+		}
+	
+		context = null;
+		return false;
+	}
+	//...
 ```
 
-#### DI без ISnipeContextHolder
-
+#### Проекты с DI без ISnipeContextHolder
+Реализуем в зависимости от структуры проекта
 
 ## Unity Log Viewer / Reporter
 В LogViewer-е был добавлен костыль, который отправляет лог на сервер в графану. Этот костыль использовал обращение к синглтону `SnipeContext.Default`, которого больше не существует.
