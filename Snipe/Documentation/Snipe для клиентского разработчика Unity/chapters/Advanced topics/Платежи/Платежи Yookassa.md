@@ -6,16 +6,18 @@
 Создание тестового магазина и тестирование платежей:
 [https://yookassa.ru/developers/payment-acceptance/testing-and-going-live/testing#test-options](https://yookassa.ru/developers/payment-acceptance/testing-and-going-live/testing#test-options)
 
+На сервере настроено, что на дев кластере всегда работает тестовый магазин, если он определен. В нем можно использовать тестовые номера карт для бесплатных платежей. На лайве всегда обычный магазин.
+
 В редакторе нужно:
 
 1. Настроить внутренние переменные
-- yookassa.shopID - идентификатор указан в разделе Настройки —> Магазин.
-- yookassa.secret - секретный ключ нужно сгенерировать и активировать паролем из смс в разделе Интеграция —> Ключи API.
-- yookassa.payment.backendKey - ключ для работы ссылки начала платежа
+- `yookassa.shopID` - идентификатор указан в разделе Настройки —> Магазин.
+- `yookassa.secret` - секретный ключ нужно сгенерировать и активировать паролем из смс в разделе Интеграция —> Ключи API.
+- `yookassa.payment.backendKey` - ключ для работы ссылки начала платежа
 
 2. Для работы тестового магазина аналогично заполнить
-- yookassa.dev.shopID
-- yookassa.dev.secret
+- `yookassa.dev.shopID`
+- `yookassa.dev.secret`
 
 3. Заполнить все Payments (provider = yook)
 
