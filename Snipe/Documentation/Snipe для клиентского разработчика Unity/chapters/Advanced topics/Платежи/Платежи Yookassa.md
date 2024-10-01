@@ -1,4 +1,4 @@
-#miniit #snipe #iap 
+#miniit #snipe #iap #yookassa 
 
 Быстрый старт по созданию магазина на стороне Yookassa:
 [https://yookassa.ru/developers/payment-acceptance/getting-started/quick-start](https://yookassa.ru/developers/payment-acceptance/getting-started/quick-start)
