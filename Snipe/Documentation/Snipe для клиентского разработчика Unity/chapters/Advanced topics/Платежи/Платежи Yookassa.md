@@ -1,19 +1,17 @@
 #miniit #snipe #iap 
 
 Быстрый старт по созданию магазина на стороне Yookassa:
-[https://yookassa.ru/developers/payment-acceptance/getting-started/quick-start]
-(https://yookassa.ru/developers/payment-acceptance/getting-started/quick-start)
+[https://yookassa.ru/developers/payment-acceptance/getting-started/quick-start](https://yookassa.ru/developers/payment-acceptance/getting-started/quick-start)
 
-Создание тестового магазина и его тестирование:
-[https://yookassa.ru/developers/payment-acceptance/testing-and-going-live/testing#test-options]
-(https://yookassa.ru/developers/payment-acceptance/testing-and-going-live/testing#test-options)
+Создание тестового магазина и тестирование платежей:
+[https://yookassa.ru/developers/payment-acceptance/testing-and-going-live/testing#test-options](https://yookassa.ru/developers/payment-acceptance/testing-and-going-live/testing#test-options)
 
 В редакторе нужно:
 
 1. Настроить внутренние переменные
 - yookassa.shopID - идентификатор указан в разделе Настройки —> Магазин.
 - yookassa.secret - секретный ключ нужно сгенерировать и активировать паролем из смс в разделе Интеграция —> Ключи API.
-- yookassa.payment.backendKey - ???
+- yookassa.payment.backendKey - ключ для работы ссылки начала платежа
 
 2. Для работы тестового магазина аналогично заполнить
 - yookassa.dev.shopID
@@ -25,7 +23,7 @@
 
 1. Обработать `SnipeApi.PaymentYookassa.Completed` - игрок совершил покупку и получил награду.
 2. Загружать список всех продуктов из `SnipeApi.Context.Tables.PaymentItems.Items` при инициализации.
-3. Задать `YOKASSA_KEY` - отправляется вместе с запросом покупки.
+3. Задать `YOKASSA_KEY` - отправляется вместе с запросом покупки (в редакторе это yookassa.payment.backendKey, спросить у кого есть доступ до внутренних переменных).
 4. Задать URL запроса покупки, который будет открываться через `Application.OpenURL(url)`.
 ```csharp
 int userID = SnipeApi.Context.Auth.UserID;
