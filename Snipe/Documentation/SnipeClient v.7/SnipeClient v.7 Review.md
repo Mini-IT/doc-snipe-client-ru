@@ -22,6 +22,7 @@
 - `com.miniit.framework.config` - требуется версия 3.4.0
 - `com.miniit.framework.iap` - требуется версия 2.0.0
 - `com.miniit.framework.iap-serververification` - требуется версия 3.0.0
+- [`com.miniit.unity-web-cookies`](https://github.com/Mini-IT/unity-web-cookies) требуется для WebGL сборок
 - `Unity-Log-Viewer` - см. ниже
 - `UWPNotificationsService` (CYSI) - нужно переделать обращения к `SnipeContext.Default`
 - `SnipeTools` 1.6.0
