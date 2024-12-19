@@ -1,4 +1,5 @@
-# Как принудительно включить DEV
+#snipe #dev #config 
+## Как принудительно включить DEV
 
 ```csharp
 #if UNITY_EDITOR

@@ -1,5 +1,11 @@
 #miniit #snipe 
 
+## 7.1.0
+- Graph API
+
+## 7.0.0
+см. [SnipeClient v.7 Review](SnipeClient/v.7/SnipeClient%20v.7%20Review.md)
+
 ## 6.3.0
 - Ack - подтверждение ответов с сервера
 - AppInfo Platform suffix
