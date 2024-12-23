@@ -21,14 +21,15 @@
 - В юнити редакторе при выходе из плеймода генерируется отчет о полученных от сервера сообщениях с errorCode != ok
 
 ## Повлияло на следующие пакеты
-- `com.miniit.altertask` - новый пакет
-- `com.miniit.framework.config` - требуется версия 3.4.0
-- `com.miniit.framework.iap` - требуется версия 2.0.0
-- `com.miniit.framework.iap-serververification` - требуется версия 3.0.0
+- [`com.miniit.altertask`](https://github.com/Mini-IT/unity-altertask) - новый пакет
+- [`com.miniit.framework.config`](https://github.com/Mini-IT/unity-framework-config) - требуется версия 3.4.0
+- [`com.miniit.framework.iap`](https://github.com/Mini-IT/unity-framework-iap) - требуется версия 2.0.0
+- [`com.miniit.framework.iap-serververification`](https://github.com/Mini-IT/unity-framework-iap-serververification) - требуется версия 3.0.0
 - [`com.miniit.unity-web-cookies`](https://github.com/Mini-IT/unity-web-cookies) требуется для WebGL сборок
+- [`com.miniit.unity-sharedprefs`](https://github.com/Mini-IT/unity-sharedprefs)  - новый пакет
 - `Unity-Log-Viewer` - см. ниже
 - `UWPNotificationsService` (CYSI) - нужно переделать обращения к `SnipeContext.Default`
-- `SnipeTools` 1.6.0
+- [`SnipeTools`](https://github.com/Mini-IT/SnipeToolsUnityPackage) 1.6.0
 
 ## SnipeApi generator changes (server side)
 1. заменить
