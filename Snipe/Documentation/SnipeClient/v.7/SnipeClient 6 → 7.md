@@ -10,6 +10,13 @@ _snipeContext = new SnipeApiContextFactory().CreateContext(0) as SnipeApiContext
 ```
 
 и обращаемся везде уже к нашему инстансу
+>[!warning]
+> ВАЖНО!
+>
+> Во ВСËМ проекте используем ТОЛЬКО единую ссылку. НЕЛЬЗЯ создавать новые контексты только ради реконнекта!
+>
+> (В проекте могут существовать несколько контекстов параллельно, но пересоздавать контексты с тем же ID не нужно - используем тот же контекст)
+
 ### interface ISnipeContextReference
 В пэкэдже объявлен интерфейс `MiniIT.Snipe.ISnipeContextReference`, который используется вместо старых
 `SnipeContext.Default` и `SnipeContext.GetInstance`.
