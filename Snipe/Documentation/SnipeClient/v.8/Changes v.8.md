@@ -1,0 +1,9 @@
+- `SnipeObject` больше не существует - используется стандартный `IDictionary<string, object>`
+- `SnipeManager` - единая точка для получения доступа к контекстам и таблицам
+- Таблицы отделены от контекста
+- `ConnectionFailed` разделено на 3 отдельных события без аргументов: 
+	- `ConnectionClosed` - Connection is completely lost. No reties left
+	- `ConnectionDisrupted` - Connection failed or lost
+	- `ReconnectionScheduled` - Automatic connection recovery routine initiated (вместо старого флага `will_reconnect`)
+- Отслеживание состояния `common -> matchmaking -> room` и интенсификация HTTP-пингов
+- 
