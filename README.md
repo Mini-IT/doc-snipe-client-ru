@@ -5,7 +5,8 @@
 
 ## Cookbook
 
-- [Перепривязка аккаунта](Snipe/Documentation/Legacy/SnipeClient%20v%205/Перепривязка%20аккаунта.md)
+- [Перепривязка аккаунта](Snipe/Documentation/Legacy/SnipeClient%20v%205/Перепривязка%20аккаунта.md) (DEPRECATED)
+- [Релогин в другой аккаунт](Snipe/Documentation/Snipe%20для%20клиентского%20разработчика%20Unity/chapters/Основы/Релогин%20в%20другой%20аккаунт.md)
 - [Как принудительно включить DEV](Snipe/Documentation/Cookbook/Как%20принудительно%20включить%20DEV.md)
 
 ## Обновления
