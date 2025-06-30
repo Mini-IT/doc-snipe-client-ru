@@ -6,4 +6,5 @@
 	- `ConnectionDisrupted` - Connection failed or lost
 	- `ReconnectionScheduled` - Automatic connection recovery routine initiated (вместо старого флага `will_reconnect`)
 - Отслеживание состояния `common -> matchmaking -> room` и интенсификация HTTP-пингов
-- 
+
+[Bindings](Bindings.md)
