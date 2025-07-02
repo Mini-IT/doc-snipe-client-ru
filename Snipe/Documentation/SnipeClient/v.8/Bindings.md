@@ -19,3 +19,10 @@ snipeContext.Auth.RegisterBinding(new FacebookBinding());
 snipeContext.Auth.RegisterBinding(new AmazonBinding());  
 snipeContext.Auth.RegisterBinding(new NutakuBinding());
 ```
+
+## ContextID prefix
+>[!warning]
+>НУЖНО протестировать биндинги и восстановления аккаунтов, т.к. переделана логика приписывания ID контекста ко внешнему ID юзера
+
+
+
