@@ -17,8 +17,8 @@
 - `snipeContext.Api.XXX` заменяем на `snipeContext.GetApi().XXX`
 - таблицы отделены от контекста, обращаться к ним теперь нужно через `SnipeManager`:
 ```cs
-	using MiniIT.Snipe;  
-	using MiniIT.Snipe.Api;
+	using MiniIT.Snipe;     // interface ISnipeManager
+	using MiniIT.Snipe.Api; // Extension method ISnipeManager.GetTables();
 	
 	ISnipeManager snipe;
 	snipe.GetTables();
