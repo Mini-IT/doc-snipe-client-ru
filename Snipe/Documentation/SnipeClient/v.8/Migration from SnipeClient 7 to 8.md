@@ -60,9 +60,9 @@
 	};
 	
 	// стало
-	context.Auth.LoginSucceeded += (uid) =>  
+	context.Auth.LoginSucceeded += (userId) =>  
 	{
-	    SetUserId(uid.ToString());  
+	    SetUserId(userId.ToString());  
 	};
 ```
 - Инициализация
