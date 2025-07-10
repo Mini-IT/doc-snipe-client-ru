@@ -9,9 +9,8 @@
 ```cs
 	using MiniIT.Snipe;
 	
-	builder.Register(() => SnipeManager.Instance)  
-	    .As<ISnipeManager>()  
-	    .As<ISnipeContextProvider>()  
+	builder.RegisterSingleton<ISnipeManager, SnipeManager()
+	    .As<ISnipeContextProvider>()
 	    .As<ISnipeTablesProvider>();
 ```
 - `snipeContext.Api.XXX` заменяем на `snipeContext.GetApi().XXX`
@@ -72,7 +71,9 @@
 	
 	// стало
 	var snipeConfigBuilder = new SnipeConfigBuilder();
-	// можно зафорсить дев
+	// инициализация данными из внешнего конфига
+	_appConfig.InitializeSnipeConfig(snipeConfigBuilder);
+	// или вместо предыдущей строки можно зафорсить дев
 	// snipeConfigBuilder.InitializeDefault(new SnipeProjectInfo()  
 	// {  
 	//  Mode = SnipeProjectMode.Dev,  
