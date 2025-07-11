@@ -80,7 +80,7 @@
 	//  ProjectID = "study1",  
 	//  ClientKey = "client-XXXXXXXX"  
 	// });
-	var factory = new SnipeApiContextFactory(snipeConfigBuilder);
+	var factory = new SnipeApiContextFactory(_snipe, snipeConfigBuilder);
 	_snipe.Initialize(factory);
 ```
 - `TablesLoadingSegment`
@@ -93,3 +93,16 @@
 	    await _snipe.GetTables().Load();
 	}
 ```
+
+
+## Подмена конфига
+иногда требуется подменить конфиг и переконнектиться.
+```cs
+var snipeConfigBuilder = new SnipeConfigBuilder();
+// инициализация данными из внешнего конфига
+_appConfig.InitializeSnipeConfig(snipeConfigBuilder);
+var factory = new SnipeApiContextFactory(_snipe, snipeConfigBuilder);
+// применить новый конфиг
+factory.Reconfigure(context);
+```
+При этом не пересоздаётся ни контекст, ни коммуникатор, ни таблицы. Поэтому заново подписываться на события не требуется. Старые ValueSyncer-ы тоже должны работать - пересоздавать не нужно.
