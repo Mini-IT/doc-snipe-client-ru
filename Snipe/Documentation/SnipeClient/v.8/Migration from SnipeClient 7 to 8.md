@@ -1,7 +1,7 @@
 - обновить пакет `SnipeTools` . Если есть compilation errors, перезапустить Unity, чтобы обновились скрипты
 - обновить пакет `SnipeClient`
 - обновить пакет `framework.config`
-- обновить пакет `framework.valuesyncer`
+- обновить пакет `framework.valuesyncer` `1.4.0`
 - обновить пакет `framework.iap.serververification` `3.1.0`
 - при необходимости, обновить пакеты аналитики и рекламы
 -  `using MiniIT.Framework.Configuration.ConfigProvider;` заменить на
