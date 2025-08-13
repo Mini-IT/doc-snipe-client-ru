@@ -1,3 +1,5 @@
+#miniit #snipe #snipe-binding #login 
+
 Метод `GetBinding<T>()` выполнял больше одной функции, поэтому был разбит на 2 отдельных метода:
 - `T RegisterBinding<T>(T binding)`
 - `bool TryGetBinding<T>(bool searchBaseClasses = true, out T binding)`
@@ -10,6 +12,7 @@
 
 ```cs
 // Для дефолтных биндингов можно использовать вспомогательный метод
+// Не рекомендуется! В будущих версиях пранируется удалить этот метод
 snipeContext.Auth.RegisterDefaultBindings();
 
 // или регистрировть каждый биндинг индивидуально

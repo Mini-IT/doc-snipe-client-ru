@@ -16,20 +16,20 @@
 	using MiniIT.Snipe;
 	
 	builder.RegisterSingleton<ISnipeManager, SnipeManager>()
-	    .As<ISnipeContextProvider>()
-	    .As<ISnipeTablesProvider>();
+	    .As<ISnipeContextProvider>() // optional
+	    .As<ISnipeTablesProvider>(); // optional
 ```
 - `snipeContext.Api.XXX` заменяем на `snipeContext.GetApi().XXX`
 - таблицы отделены от контекста, обращаться к ним теперь нужно через `SnipeManager`:
 ```cs
-	using MiniIT.Snipe;     // interface ISnipeManager
-	using MiniIT.Snipe.Api; // Extension method ISnipeManager.GetTables();
+	using MiniIT.Snipe;     // тут объявлен interface ISnipeManager
+	using MiniIT.Snipe.Api; // тут раширение, реализующее метод ISnipeManager.GetTables();
 	
 	ISnipeManager snipe;
 	snipe.GetTables();
 ```
 - использование в коде интерфейса `ISnipeContextHolder` можно заменить на `ISnipeManager` (или на более низкоуровневые `ISnipeContextProvider`, `ISnipeTablesProvider`, в зависимости от конкретного сценария использования, но это будет менее удобно)
-- к `SnipeConfig` теперь нельзя обращаться из проектного кода - он задается через фабрику перед коннектом
+- к `SnipeConfig` теперь нельзя обращаться из проектного кода - он задается через фабрику при инициализации
 	- к полю `Config.ProjectName` можно обратиться через контекст `context.ProjectName`
 	```cs
 	// было
@@ -45,15 +45,19 @@
 	}
 	```
 - Facebook JSON blob
-	- было: ~~`string json = SnipeObject.ConvertToJSONString(FacebookProvider.Instance.PlayerProfile);`~~
-	- стало: `string json = JsonUtility.ToJson(FacebookProvider.Instance.PlayerProfile.ToObject());`
-- OnLogin
-	- было: 
-	```cs
-	server.LoggedIn += SetUserId;
+  ```cs
+	// было
+	string json = SnipeObject.ConvertToJSONString(FacebookProvider.Instance.PlayerProfile);
+
+	// стало
+	string json = JsonUtility.ToJson(FacebookProvider.Instance.PlayerProfile.ToObject());
 	```
-	- стало:
+- OnLogin
 	```cs
+	// было 
+	server.LoggedIn += SetUserId;
+	
+	// стало
 	snipe.GetContextWhenReady(context =>
 	{  
 		context.Auth.LoginSucceeded += uid => SetUserId(uid.ToString());
@@ -126,11 +130,13 @@ ReconnectionScheduled;
 ### Подмена конфига
 иногда требуется подменить конфиг и переконнектиться.
 ```cs
+// создаем новый билдер конфига
 var snipeConfigBuilder = new SnipeConfigBuilder();
-// инициализация данными из внешнего конфига
+// инициализируем билдер данными из внешнего конфига
 _appConfig.InitializeSnipeConfig(snipeConfigBuilder);
+// создаем новую фабрику
 var factory = new SnipeApiContextFactory(_snipe, snipeConfigBuilder);
-// применить новый конфиг
+// примененяем новый конфиг к старому контексту
 factory.Reconfigure(context);
 ```
 При этом не пересоздаётся ни контекст, ни коммуникатор, ни таблицы. Поэтому заново подписываться на события не требуется. Старые ValueSyncer-ы тоже должны работать - пересоздавать не нужно.
@@ -144,5 +150,5 @@ error CS1061: 'ISnipeManager' does not contain a definition for 'GetApi' ...
 ```
 просто добавьте вначале файла
 ```cs
-using MiniIT.Snipe.Api;
+using MiniIT.Snipe.Api; // тут объявлены расширения с методами GetApi и GetTables
 ```
