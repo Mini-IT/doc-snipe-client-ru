@@ -109,7 +109,8 @@
 ```
 
 ### События коннекта
-Для устранения неоднозначностей, события `SnipeCommunicator` реорганизованы
+Основная статья: [Connection Events Flow](Connection%20Events%20Flow.md)
+Для устранения неоднозначностей, события `SnipeCommunicator` реорганизованы.
 ```cs
 // Соединение установлено
 ConnectionEstablished;  
