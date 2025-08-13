@@ -8,8 +8,8 @@
   `using MiniIT.Framework.Configuration.Providers;`
 
 - если в проекте используются `ISnipeContextHolder`, `ISnipeContextMaster`, `class ServerContext : ISnipeContextMaster`, то вырезаем их.
-  > [!warning]
-  > Это проектный код и тут могут использоваться какая-то специфическая логика инициализации и заполнения конфига - не потеряйте её
+> [!warning]
+  >  Это проектный код и тут могут использоваться какая-то специфическая логика инициализации и заполнения конфига - не потеряйте её
   
 - Регистрируем `SnipeManager` в DI `AppRootContainer`
 ```cs
