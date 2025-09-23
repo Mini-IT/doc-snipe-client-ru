@@ -6,7 +6,7 @@ TimeSpan HttpHeartbeatInterval
 
 Однако во время работы приложения бывают моменты, когда клиенту нужно как можно быстрее получить ответ от сервера. Например при выполнении покупки через сервер. При этом следует опрашивать сервер чаще. Для этого предусмотрен интенсивный режим, который включается и выключается следующим образом:
 ```csharp
-snipeContext.Communicator.SetIntensiveHeartbeat(true | false);
+snipeContext.Communicator.SetIntensiveHeartbeat(bool);
 ```
 
 ### Интенсивные пинги в комнате
