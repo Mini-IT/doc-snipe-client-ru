@@ -6,7 +6,7 @@
 	- `ConnectionClosed` - Connection is completely lost. No reties left
 	- `ConnectionDisrupted` - Connection failed or lost
 	- `ReconnectionScheduled` - Automatic connection recovery routine initiated (вместо старого флага `will_reconnect`)
-- Отслеживание состояния `common -> matchmaking -> room` и интенсификация HTTP-пингов
+- Отслеживание состояния `common -> matchmaking -> room` и [интенсификация HTTP-пингов](Intensive%20HTTP%20Heartbeat.md)
 - Инициализация биндингов переделана. См. [Bindings](Bindings.md)
 
 ## Relogin + ValueSyncer
