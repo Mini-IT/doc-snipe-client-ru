@@ -15,6 +15,7 @@
 - [Migration from SnipeClient 7 to 8](Snipe/Documentation/SnipeClient/v.8/Migration%20from%20SnipeClient%207%20to%208.md)
 - [Connection Events Flow](Snipe/Documentation/SnipeClient/v.8/Connection%20Events%20Flow.md)
 - [Bindings](Snipe/Documentation/SnipeClient/v.8/Bindings.md)
+- [Message Flow](Snipe/Documentation/SnipeClient/Message%20Flow.md)
 
 ## Legacy
 - [Changelog](Snipe/Documentation/Changelog.md)
