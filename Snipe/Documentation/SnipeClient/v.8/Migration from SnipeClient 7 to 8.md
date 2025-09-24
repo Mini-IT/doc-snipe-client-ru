@@ -63,7 +63,7 @@
 		context.Auth.LoginSucceeded += uid => SetUserId(uid.ToString());
 	});
 	```
-- обратите внимание (в продолжение предыдущего пункта), в OnLoginSucceeded добавился параметр `int userId`:
+- обратите внимание (в продолжение предыдущего пункта), в `OnLoginSucceeded` добавился параметр `int userId`:
 ```cs
 	// Было
 	context.Auth.LoginSucceeded += () =>
@@ -128,6 +128,40 @@ ReconnectionScheduled;
 ### Bindings
 Инициализация биндингов переделана. См. Подробнее тут: [Bindings](Bindings.md)
 
+### Загрузка внешнего конфига
+>[!WARNING]
+> Важно!
+
+Загрузка конфига (т.е. инициализация `_appConfig` из примера выше) не начнётся пока не будет вызван `SnipeServices.Initialize`. Если не вызывать его вручную, то он автоматически вызовется со стандартными параметрами при первой попытке создать контекст. Поэтому, если задавать параметры соединения вручную через `snipeConfigBuilder.InitializeDefault()`, то вызывать `SnipeServices.Initialize` нет необходимости. Однако на практике часто требуется сначала загрузить конфиг, чтобы проинициализировать SnipeManager и только потом создавать контексты. Для этого нужно заранее проинициализировать SnipeServices. Например так:
+```csharp
+public class ServerService
+{
+    public ServerService(...)
+    {
+        // ...
+
+        InitializeSnipeContext();
+    }
+
+    private void InitializeSnipeContext()
+    {
+        if (!SnipeServices.IsInitialized)
+        {
+            SnipeServices.Initialize(new UnitySnipeServicesFactory());
+        }
+
+        _contextCancellation = new CancellationTokenSource();
+        WaitConfigAndStart(_contextCancellation.Token).Forget();
+    }
+
+    private async UniTaskVoid WaitConfigAndStart(CancellationToken cancellationToken)
+    {
+        await UniTask.WaitUntil(() => _appConfig.Initialized, cancellationToken: cancellationToken)
+            .SuppressCancellationThrow();
+
+    //...
+```
+
 ### Подмена конфига
 иногда требуется подменить конфиг и переконнектиться.
 ```cs
@@ -141,6 +175,9 @@ var factory = new SnipeApiContextFactory(_snipe, snipeConfigBuilder);
 factory.Reconfigure(context);
 ```
 При этом не пересоздаётся ни контекст, ни коммуникатор, ни таблицы. Поэтому заново подписываться на события не требуется. Старые ValueSyncer-ы тоже должны работать - пересоздавать не нужно.
+
+>[!NOTE] 
+> На текущее соединение изменения не повлияют. Это только для того, чтобы переконнетиться с другими параметрами.
 
 
 ### Troubleshooting
