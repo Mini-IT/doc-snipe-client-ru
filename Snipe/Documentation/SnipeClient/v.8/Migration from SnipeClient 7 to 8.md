@@ -23,7 +23,7 @@
 - таблицы отделены от контекста, обращаться к ним теперь нужно через `SnipeManager`:
 ```cs
 	using MiniIT.Snipe;     // тут объявлен interface ISnipeManager
-	using MiniIT.Snipe.Api; // тут раширение, реализующее метод ISnipeManager.GetTables();
+	using MiniIT.Snipe.Api; // тут расширение, реализующее метод ISnipeManager.GetTables();
 	
 	ISnipeManager snipe;
 	snipe.GetTables();
