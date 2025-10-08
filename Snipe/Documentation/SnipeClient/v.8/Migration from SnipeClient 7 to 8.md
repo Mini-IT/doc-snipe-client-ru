@@ -95,6 +95,12 @@
 	// });
 	var factory = new SnipeApiContextFactory(_snipe, snipeConfigBuilder);
 	_snipe.Initialize(factory);
+
+	// TryGetContext вернёт инстанс только если он был создан
+    // А GetOrCreateContext создаст, если его еще нет
+	// Т.о. хотя бы один раз нужно вызывать GetOrCreateContext, чтобы инстанс создался
+
+	var context = _snipe.GetOrCreateContext();
 ```
 - `TablesLoadingSegment`
 ```cs
