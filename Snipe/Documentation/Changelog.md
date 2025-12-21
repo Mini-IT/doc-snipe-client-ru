@@ -1,5 +1,10 @@
 #miniit #snipe 
 
+## 8.4.1
+KCP disconnect NRE fixed
+## 8.4.0
+ProfileManager
+
 ## 8.0.0
 - [Changes v.8](SnipeClient/v.8/Changes%20v.8.md)
 
