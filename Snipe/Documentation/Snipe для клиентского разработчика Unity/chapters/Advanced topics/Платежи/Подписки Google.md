@@ -1,5 +1,9 @@
 #miniit #snipe #iap #iap-subscription #android
 
+В редакторе нужно:
+
+1. Настроить внутреннюю переменную googlePlay.payment.backendKey
+
 ПМ-у нужно:
 1. Открыть console.cloud.google.com
 2. Выбрать проект <img width="2846" height="1220" alt="image" src="https://github.com/user-attachments/assets/350a3a03-5db7-4900-bf29-acd9117ee770" />
@@ -11,14 +15,6 @@
 8. Выставляем Expiry period - Never expire, Acknowledgement deadline - 10 sec <img width="1424" height="552" alt="image" src="https://github.com/user-attachments/assets/e37d18ce-f2c9-4b88-aa04-d0902dba016b" />
 9. Остальные пункты не трогаем, сохраняем изменения.
 
-
-
-
-
-
-
-1. Настроить внутреннюю переменную googlePlay.payment.backendKey
-2. Сохранить урл колбека в гугловой админке - [https://kit.snipe.dev/api/v1/google/notify/](https://kit.snipe.dev/api/v1/google/notify/)<ключ>
 
 Клиенту нужно:
 
