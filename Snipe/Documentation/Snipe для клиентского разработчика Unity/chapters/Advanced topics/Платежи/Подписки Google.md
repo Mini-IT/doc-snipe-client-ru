@@ -1,6 +1,21 @@
 #miniit #snipe #iap #iap-subscription #android
 
-В редакторе нужно:
+ПМ-у нужно:
+1. Открыть console.cloud.google.com
+2. Выбрать проект <img width="2846" height="1220" alt="image" src="https://github.com/user-attachments/assets/350a3a03-5db7-4900-bf29-acd9117ee770" />
+3. В поиске найти pub/sub <img width="2852" height="1144" alt="image" src="https://github.com/user-attachments/assets/fb79ae5f-8f3a-4c5d-a517-9f8770c0d7a8" />
+4. Выбрать  Create topic <img width="1420" height="516" alt="image" src="https://github.com/user-attachments/assets/ba7c23bf-0228-4843-82a9-8940c2d66920" />
+5. Создаём топик подписки и переходим в раздел Subscriptions <img width="1421" height="588" alt="image" src="https://github.com/user-attachments/assets/0145f4ed-dda3-4463-a93d-866369128fdc" />
+6. В разделе подписки переходим к редактированию <img width="1418" height="657" alt="image" src="https://github.com/user-attachments/assets/8531e9f6-45e3-457d-8be2-33e0ccf78934" />
+7. Выбираме Delivery type - Push, в поле Endpoint url вставляем адрес googlePlay.payment.backendKey из Snipe проекта <img width="1425" height="594" alt="image" src="https://github.com/user-attachments/assets/5603507e-39cd-4c03-bf68-ea330e3e7d5a" />
+8. Выставляем Expiry period - Never expire, Acknowledgement deadline - 10 sec <img width="1424" height="552" alt="image" src="https://github.com/user-attachments/assets/e37d18ce-f2c9-4b88-aa04-d0902dba016b" />
+9. Остальные пункты не трогаем, сохраняем изменения.
+
+
+
+
+
+
 
 1. Настроить внутреннюю переменную googlePlay.payment.backendKey
 2. Сохранить урл колбека в гугловой админке - [https://kit.snipe.dev/api/v1/google/notify/](https://kit.snipe.dev/api/v1/google/notify/)<ключ>
