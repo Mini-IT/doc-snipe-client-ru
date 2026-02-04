@@ -14,8 +14,10 @@
 7. Выбираме Delivery type - Push, в поле Endpoint url вставляем адрес googlePlay.payment.backendKey из Snipe проекта <img width="2850" height="1188" alt="image" src="https://github.com/user-attachments/assets/fbb2f0cf-753c-4419-94ba-c0c4236fc572" />
 
 8. Выставляем Expiry period - Never expire, Acknowledgement deadline - 10 sec <img width="2848" height="1104" alt="image" src="https://github.com/user-attachments/assets/41c58577-59f1-4888-b61c-9bdebca9d5ec" />
-
-9. Остальные пункты не трогаем, сохраняем изменения.
+9. Попросить Влада добавить учётную запись службы google-play-developer-notifications@system.gserviceaccount.com с ролью Pub/Sub Publisher <img width="1420" height="652" alt="image" src="https://github.com/user-attachments/assets/a0f36fcd-0d0a-406b-8c80-cf7e4b2c2365" />
+10. В google console в настройках монетизации нужно включить уведомления в режиме реального времени (Real-time developer notifications) и скопировать в поле Название темы полное наименование из Sub/Pub <img width="1407" height="545" alt="image" src="https://github.com/user-attachments/assets/fcefcaed-b1d3-4ed6-993f-7910c6a7ec65" />
+    скопировать полное название темы можно в настройках
+    <img width="755" height="489" alt="image" src="https://github.com/user-attachments/assets/85b18974-db27-4266-b197-9c5e1ce8b942" />
 
 
 Клиенту нужно:
