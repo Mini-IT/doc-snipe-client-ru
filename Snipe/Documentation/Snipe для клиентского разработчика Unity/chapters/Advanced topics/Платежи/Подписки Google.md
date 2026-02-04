@@ -11,8 +11,10 @@
 4. Выбрать  Create topic <img width="1420" height="516" alt="image" src="https://github.com/user-attachments/assets/ba7c23bf-0228-4843-82a9-8940c2d66920" />
 5. Создаём топик подписки и переходим в раздел Subscriptions <img width="1421" height="588" alt="image" src="https://github.com/user-attachments/assets/0145f4ed-dda3-4463-a93d-866369128fdc" />
 6. В разделе подписки переходим к редактированию <img width="1418" height="657" alt="image" src="https://github.com/user-attachments/assets/8531e9f6-45e3-457d-8be2-33e0ccf78934" />
-7. Выбираме Delivery type - Push, в поле Endpoint url вставляем адрес googlePlay.payment.backendKey из Snipe проекта <img width="1425" height="594" alt="image" src="https://github.com/user-attachments/assets/5603507e-39cd-4c03-bf68-ea330e3e7d5a" />
-8. Выставляем Expiry period - Never expire, Acknowledgement deadline - 10 sec <img width="1424" height="552" alt="image" src="https://github.com/user-attachments/assets/e37d18ce-f2c9-4b88-aa04-d0902dba016b" />
+7. Выбираме Delivery type - Push, в поле Endpoint url вставляем адрес googlePlay.payment.backendKey из Snipe проекта <img width="2850" height="1188" alt="image" src="https://github.com/user-attachments/assets/fbb2f0cf-753c-4419-94ba-c0c4236fc572" />
+
+8. Выставляем Expiry period - Never expire, Acknowledgement deadline - 10 sec <img width="2848" height="1104" alt="image" src="https://github.com/user-attachments/assets/41c58577-59f1-4888-b61c-9bdebca9d5ec" />
+
 9. Остальные пункты не трогаем, сохраняем изменения.
 
 
