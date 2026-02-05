@@ -15,7 +15,7 @@
 
 8. Выставляем Expiry period - Never expire, Acknowledgement deadline - 10 sec <img width="2848" height="1104" alt="image" src="https://github.com/user-attachments/assets/41c58577-59f1-4888-b61c-9bdebca9d5ec" />
 9. Попросить Влада добавить учётную запись службы google-play-developer-notifications@system.gserviceaccount.com с ролью Pub/Sub Publisher <img width="1420" height="652" alt="image" src="https://github.com/user-attachments/assets/a0f36fcd-0d0a-406b-8c80-cf7e4b2c2365" />
-10. В google console в настройках монетизации нужно включить уведомления в режиме реального времени (Real-time developer notifications) и скопировать в поле Название темы полное наименование из Sub/Pub, сохранить изменения и проверить тестовую отправку сообщения, если возникает ошибка с отправкой - нужно вернуться к настройке доступа к чётной записи <img width="2814" height="1090" alt="image" src="https://github.com/user-attachments/assets/6be44cb1-f5c6-4a35-899e-fb098f900ec7" />
+10. В google console в настройках монетизации нужно включить уведомления в режиме реального времени (Real-time developer notifications) и скопировать в поле "Название темы" полное наименование из Sub/Pub, сохранить изменения и проверить тестовую отправку сообщения, если возникает ошибка с отправкой - нужно проверить название тему и настройки разрешений на предыдущем шаге <img width="2814" height="1090" alt="image" src="https://github.com/user-attachments/assets/6be44cb1-f5c6-4a35-899e-fb098f900ec7" />
 
     скопировать полное название темы можно в настройках
     <img width="755" height="489" alt="image" src="https://github.com/user-attachments/assets/85b18974-db27-4266-b197-9c5e1ce8b942" />
