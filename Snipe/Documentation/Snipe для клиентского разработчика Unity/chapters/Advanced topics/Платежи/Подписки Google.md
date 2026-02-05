@@ -4,6 +4,9 @@
 
 1. Настроить внутреннюю переменную googlePlay.payment.backendKey
 
+Документация:
+[https://developer.android.com/google/play/billing/getting-ready](https://developer.android.com/google/play/billing/getting-ready#configure-rtdn) - настройка real-time developer notifications
+
 ПМ-у нужно:
 1. Открыть console.cloud.google.com
 2. Выбрать проект <img width="2846" height="1220" alt="image" src="https://github.com/user-attachments/assets/388225ba-d946-4380-a826-a425f69049f2" />
