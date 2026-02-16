@@ -13,8 +13,7 @@ builder.RegisterSingleton<ISnipeManager>(() => new SnipeManager(new UnitySnipeSe
 
 ### SnipeOptions
 
-`SnipeConfig` переименован в `SnipeOptions`, чтобы избежать путаницы с `RemoteConfig` и привести нейминг к общепринятым стандартам
-`SnipeConfigBuilder` - в `SnipeOptionBuilder`
+`SnipeConfig` переименован в `SnipeOptions` (`SnipeConfigBuilder` - в `SnipeOptionBuilder`), чтобы избежать путаницы с `RemoteConfig` и привести нейминг к общепринятым стандартам
 
 ### TablesOptions
 
