@@ -126,6 +126,7 @@ var profileManager = new ProfileManager(context.GetApi(), context.Communicator, 
 
 ## Packages affected
 
-config
-analytics.basic
-analytics.amplitude
+- config
+- analytics.basic
+- analytics.amplitude
+
