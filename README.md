@@ -10,6 +10,9 @@
 - [Как принудительно включить DEV](Snipe/Documentation/Cookbook/Как%20принудительно%20включить%20DEV.md)
 - [Connection Events Flow](Snipe/Documentation/SnipeClient/v.8/Connection%20Events%20Flow.md)
 
+## Snipe Client v.9
+- [Migration v8 -> v9](Snipe/Documentation/SnipeClient/v.9/Migration%20v8%20->%20v9.md)
+
 ## Snipe Client v.8
 - [Changes v.8](Snipe/Documentation/SnipeClient/v.8/Changes%20v.8.md)
 - [Migration from SnipeClient 7 to 8](Snipe/Documentation/SnipeClient/v.8/Migration%20from%20SnipeClient%207%20to%208.md)
