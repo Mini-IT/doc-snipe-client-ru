@@ -3,7 +3,7 @@
 
 Основное отличие - в том, что `ISnipeManager` теперь является единой "точкой входа" для работы со снайпом. Больше никаких отдельных синглтонов и статических классов - всё через `ISnipeManager`, всё в соответствии с DI паттернами.
 
-## DI регистрации
+## DI регистрация
 
 ```cs
 builder.RegisterSingleton<ISnipeManager>(() => new SnipeManager(new UnitySnipeServicesFactory()));
@@ -40,8 +40,8 @@ _snipe.Initialize(contextFactory, tablesFactory);
 
 ## Пробросить ISnipeServices
 
-`SnipeServices` больше не является синглтоном. Инстанс можно получить через `ISnipeManager.Services`.
-Т.к. это больше не синглтон, то некоторым объектам нужно явно передать ссылку.  
+`SnipeServices` больше не является статическим классом. Инстанс можно получить через `ISnipeManager.Services`.
+Т.к. это больше не статический класс, то некоторым объектам нужно явно передать ссылку.
 
 ### В биндинги
 
@@ -53,7 +53,7 @@ snipeContext.Auth.RegisterBinding(new AmazonBinding(_snipe.Services));
 ```
 
 ### В Аналитику !!!!!! ВАЖНО !!!!!!!!
-
+Раньше пакет аналитики сам мог подцепиться к статическому классу. Теперь нужно явно пробрость инстанс:
 ```cs
 public class AnalyticsService : BasicAnalyticsTracker
 {
