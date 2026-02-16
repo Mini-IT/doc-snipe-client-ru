@@ -1,4 +1,4 @@
-
+#miniit #snipe #snipe-api
 # Snipe 9 - инструкция по переводу проекта
 
 Основное отличие - в том, что `ISnipeManager` теперь является единой "точкой входа" для работы со снайпом. Больше никаких отдельных синглтонов и статических классов - всё через `ISnipeManager`, всё в соответствии с DI паттернами.
@@ -76,7 +76,7 @@ public class AppConfig : Config
     : base(new SnipeConfigProvider(PROJECT_ID, snipe.Services), TimeSpan.FromSeconds(15)) { }
 ```
 
-### SnipeApi
+## SnipeApi
 
 Кастомные сокращения вырезаны - названия теперь формируются по единым стандартам
 
@@ -100,31 +100,31 @@ api.Room.OnRoomDead ...
 api.Room.OnRoomBroadcast ...
 ```
 
-# Tables.Load()
+## Tables.Load Cancellation
 
 в Tables.Load() теперь можно передать CancellationToken и прервать операцию
 
-# ProfileManager
+## ProfileManager
 
 `ProfileManager` всё ещё является частью пакета, но теперь он полностью изолирован. Поэтому треубется явно прокинуть ссылки в конструкторе:
 ```cs
 var profileManager = new ProfileManager(context.GetApi(), context.Communicator, context.Auth, _snipe.Services.SharedPrefs);
 ```
 
-# AuthBinding.AvailableForRegistration
+## AuthBinding.AvailableForRegistration
 
 Можно создавать кастомные биндинги, которые будут автоматически добавляться в запрос `registerAndLogin`, если у них свойство `AvailableForRegistration == true`
 
 ------
 
-# SnipeTools
+## SnipeTools
 
 - SnipeApi v9
 - Preload tables - автоматически создаёт папку StreamingAssets. Раньше был фейл, если её не существовало.
 
 ---------
 
-# Packages affected
+## Packages affected
 
 config
 analytics.basic
