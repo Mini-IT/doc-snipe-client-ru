@@ -11,6 +11,7 @@
 - [Connection Events Flow](Snipe/Documentation/SnipeClient/v.8/Connection%20Events%20Flow.md)
 
 ## Snipe Client v.9
+- [Changes v.9](Snipe/Documentation/SnipeClient/v.9/Changes%20v.9.md)
 - [Migration v8 -> v9](Snipe/Documentation/SnipeClient/v.9/Migration%20v8%20->%20v9.md)
 
 ## Snipe Client v.8

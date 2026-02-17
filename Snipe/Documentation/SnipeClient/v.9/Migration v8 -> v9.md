@@ -1,11 +1,35 @@
 #miniit #snipe #snipe-api
 # Snipe 9 - инструкция по переводу проекта
 
+## Обновить пакеты
+Они совместимы с версиями 7-9
+- config 4.2.0
+- analytics.basic 4.3.0
+- analytics.amplitude 5.0.1
+
+## Обновить SnipeTools
+SnipeTools 1.9.0
+
+Будут ошибки компиляции из-за строго кода в проекте. Нужно перезапустить Unity. Ошибки никуда не пропадут, но SnipeTools обновится
+
+## Скачать новый SnipeApi
+`Snipe` -> `Download SnipeApi ...`
+
+убедиться, что возле кнопки Download указана 9 версия снайпа
+```
+Snipe API Service Version: 9 (local source generator)
+```
+
+## Правки кода
+
 Основное отличие - в том, что `ISnipeManager` теперь является единой "точкой входа" для работы со снайпом. Больше никаких отдельных синглтонов и статических классов - всё через `ISnipeManager`, всё в соответствии с DI паттернами.
 
 ## DI регистрация
 
 ```cs
+using MiniIT.Snipe;  
+using MiniIT.Snipe.Unity;
+
 builder.RegisterSingleton<ISnipeManager>(() => new SnipeManager(new UnitySnipeServicesFactory()));
 ```
 
@@ -25,16 +49,18 @@ builder.RegisterSingleton<ISnipeManager>(() => new SnipeManager(new UnitySnipeSe
 _snipe.TablesOptions.Versioning = TablesOptions.VersionsResolution.ForceBuiltIn;
 ```
 
+Обращаться к `_snipe.TableOptions` можно только после вызова `_snipe.Initialize(...)`
 ## Initialization
 
 ```cs
 private readonly ISnipeManager _snipe;
 
 var builder = new SnipeOptionsBuilder();
+_appConfig.InitializeSnipeOptions(builder);
+
 var contextFactory = new SnipeApiContextFactory(_snipe, builder);
 var tablesFactory = new SnipeApiTablesFactory(_snipe.Services, builder);
 
-_appConfig.InitializeSnipeOptions(builder);
 _snipe.Initialize(contextFactory, tablesFactory);
 ```
 
@@ -53,7 +79,7 @@ snipeContext.Auth.RegisterBinding(new AmazonBinding(_snipe.Services));
 ```
 
 ### В Аналитику !!!!!! ВАЖНО !!!!!!!!
-Раньше пакет аналитики сам мог подцепиться к статическому классу. Теперь нужно явно пробрость инстанс:
+Раньше пакет аналитики сам мог подцепиться к статическому классу. Теперь нужно указать треккер вручную:
 ```cs
 public class AnalyticsService : BasicAnalyticsTracker
 {
@@ -73,59 +99,16 @@ public class AppConfig : Config
 {
   public AppConfig(ISnipeManager snipe)
     : base(new SnipeConfigProvider(PROJECT_ID, snipe.Services), TimeSpan.FromSeconds(15)) { }
+  // ...
+}
 ```
 
 ## SnipeApi
-
-Кастомные сокращения вырезаны - названия теперь формируются по единым стандартам
-
-было
-```
-api.Chat.Msg ...
-api.Clan.Msg ...
-api.Room.Left ...
-api.Room.Dead ...
-// api.Room.Join // даже не существовало
-// api.Room.Broadcast // даже не существовало
-```
-
-стало
-```
-api.Chat.OnChatMsg ...
-api.Clan.OnClanMsg ...
-api.Room.OnRoomJoin ...
-api.Room.OnRoomLeft ...
-api.Room.OnRoomDead ...
-api.Room.OnRoomBroadcast ...
-```
-
-## Tables.Load Cancellation
-
-в Tables.Load() теперь можно передать CancellationToken и прервать операцию
+Сокращённые названия событий переименованы на полные (см. [Changes v.9](Changes%20v.9.md)). При необходимости - поправить обращения в коде проекта
 
 ## ProfileManager
 
-`ProfileManager` всё ещё является частью пакета, но теперь он полностью изолирован. Поэтому треубется явно прокинуть ссылки в конструкторе:
+`ProfileManager` теперь изолирован и создаётся через собственный конструктор:
 ```cs
 var profileManager = new ProfileManager(context.GetApi(), context.Communicator, context.Auth, _snipe.Services.SharedPrefs);
 ```
-
-## AuthBinding.AvailableForRegistration
-
-Можно создавать кастомные биндинги, которые будут автоматически добавляться в запрос `registerAndLogin`, если у них свойство `AvailableForRegistration == true`
-
-------
-
-## SnipeTools
-
-- SnipeApi v9
-- Preload tables - автоматически создаёт папку StreamingAssets. Раньше был фейл, если её не существовало.
-
----------
-
-## Packages affected
-
-- config
-- analytics.basic
-- analytics.amplitude
-
