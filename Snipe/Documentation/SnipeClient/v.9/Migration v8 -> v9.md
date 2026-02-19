@@ -3,6 +3,7 @@
 
 ## Обновить пакеты
 Они совместимы с версиями 7-9
+- unity-logger 2.0.0
 - config 4.2.0
 - analytics.basic 4.3.0
 - analytics.amplitude 5.0.1
