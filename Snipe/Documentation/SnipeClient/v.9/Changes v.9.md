@@ -40,7 +40,7 @@ api.Room.OnRoomBroadcast ...
 
 ## ProfileManager
 
-`ProfileManager` всё ещё является частью пакета, но теперь он полностью изолирован. Поэтому требуется явно прокинуть ссылки в конструкторе:
+`ProfileManager` изолирован и вынесен в отдельный пакет `unity-snipe-profilemanager`. Поэтому требуется явно прокинуть ссылки в конструкторе:
 ```cs
 var profileManager = new ProfileManager(context.GetApi(), context.Communicator, context.Auth, _snipe.Services.SharedPrefs);
 ```
