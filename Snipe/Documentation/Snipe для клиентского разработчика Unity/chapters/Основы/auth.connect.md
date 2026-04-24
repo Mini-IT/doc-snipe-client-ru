@@ -3,6 +3,7 @@
 # Отличие `auth.bind` от `auth.connect`
 
 `auth.bind` - это привязка `(Snipe Account) - (Внешний ID)`
+
 `auth.connect` - это привязка `(Внешний ID A) - (Внешний ID B)`
 
 # Как работает `auth.bind`
