@@ -5,7 +5,7 @@
 
 ## Cookbook
 
-- [Перепривязка аккаунта](Snipe/Documentation/Legacy/SnipeClient%20v%205/Перепривязка%20аккаунта.md) (DEPRECATED)
+- [Перепривязка аккаунта](Snipe/Documentation/Legacy/SnipeClient%20v%205/Перепривязка%20аккаунта.md) (DEPRECATED) - См.  [auth.connect](auth.connect.md)
 - [Релогин в другой аккаунт](Snipe/Documentation/Snipe%20для%20клиентского%20разработчика%20Unity/chapters/Основы/Релогин%20в%20другой%20аккаунт.md)
 - [Как принудительно включить DEV](Snipe/Documentation/Cookbook/Как%20принудительно%20включить%20DEV.md)
 - [Connection Events Flow](Snipe/Documentation/SnipeClient/v.8/Connection%20Events%20Flow.md)
